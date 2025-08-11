@@ -25,7 +25,7 @@ public class SchoolController {
 
 
     @GetMapping("/schools")
-    public List<SchoolDto> findAll(){
+    public List<SchoolResponse> findAll(){
         return schoolService.findAllSchools();
     }
 

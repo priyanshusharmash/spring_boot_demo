@@ -12,4 +12,7 @@ public class SchoolMapper {
     public SchoolDto toSchoolDto(School school){
         return new SchoolDto(school.getName());
     }
+    public SchoolResponse toSchoolResponse(School school){
+        return new SchoolResponse(school.getId(), school.getName());
+    }
 }

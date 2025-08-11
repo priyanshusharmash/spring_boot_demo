@@ -21,10 +21,10 @@ public class SchoolService {
         return schoolMapper.toSchoolDto(savedSchool);
     }
 
-    public List<SchoolDto> findAllSchools(){
+    public List<SchoolResponse> findAllSchools(){
         return schoolRepository.findAll()
                 .stream()
-                .map(schoolMapper::toSchoolDto)
+                .map(schoolMapper::toSchoolResponse)
                 .collect(Collectors.toList());
     }
 }
